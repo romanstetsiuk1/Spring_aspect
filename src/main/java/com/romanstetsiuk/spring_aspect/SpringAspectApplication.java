@@ -18,5 +18,6 @@ public class SpringAspectApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         userService.getUpperName();
+        userService.error();
     }
 }

@@ -39,6 +39,12 @@ public class UserAspect {
         }
     }
 
+    @AfterThrowing(pointcut = "execution(* com.romanstetsiuk.spring_aspect.UserService.*(..))",
+            throwing = "e")
+    public void afterThroe(Throwable e) {
+        log.error("Wystapil blad", e);
+    }
+
     @Pointcut("execution(public String getUpperName())")
     public void upperPointcut() {
     }

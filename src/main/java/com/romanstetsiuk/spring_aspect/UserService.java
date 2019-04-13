@@ -15,4 +15,8 @@ public class UserService {
         return user.getPesel().substring(0, 6);
     }
 
+    public Long error() {
+        return Long.valueOf(user.getName());
+    }
+
 }
